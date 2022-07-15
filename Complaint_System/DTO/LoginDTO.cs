@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Complaint_System.DTO
 {
-    class LoginDTO
+    public class LoginDTO
     {
         private string _username;
         private string _password;
