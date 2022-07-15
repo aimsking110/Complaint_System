@@ -15,7 +15,7 @@ namespace Complaint_System.DL
             string path = Environment.CurrentDirectory;
             string[] appPath = path.Split(new string[] { "bin" }, StringSplitOptions.None);
             string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\umaru\Documents\CL&TS.mdf;Integrated Security=True";
-            Con = new SqlConnection(conString);
+            con = new SqlConnection(conString);
         }
 
         public SqlConnection Con { get => con; set => con = value; }

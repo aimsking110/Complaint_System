@@ -24,8 +24,7 @@ namespace Complaint_System.DL
                 //1. Apply validations on client and server side both
                 //2. Use parameter passing in queries
                 dbCon.Con.Open();
-                string queryString = "SELECT * FROM User WHERE UserID=@UserID AND Password=@Password;";
-                //string queryString = "SELECT * FROM MyUser WHERE UserID='" + lg.Username + "' AND Password='" + lg.Password + "';";
+                string queryString = "SELECT * FROM Users WHERE UserID=@UserID AND Password=@Password;";
                 SqlCommand com = new SqlCommand(queryString, dbCon.Con);
                 com.Parameters.AddWithValue("@UserID", lg.Username);
                 com.Parameters.AddWithValue("@Password", lg.Password);
