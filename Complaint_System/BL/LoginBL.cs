@@ -20,7 +20,7 @@ namespace Complaint_System.BL
    
         public Form VerifyUser(LoginDTO lg)
         {
-            // Here we call loginDL objects method verifyUserFromDB
+
             UserDTO ud = _lgDL.VerifyUserFromDB(lg);
             if (ud == null)
             {

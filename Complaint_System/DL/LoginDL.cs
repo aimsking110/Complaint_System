@@ -21,8 +21,6 @@ namespace Complaint_System.DL
             UserDTO retDTO = new UserDTO();
             try
             {
-                //1. Apply validations on client and server side both
-                //2. Use parameter passing in queries
                 dbCon.Con.Open();
                 string queryString = "SELECT * FROM Users WHERE UserID=@UserID AND Password=@Password;";
                 SqlCommand com = new SqlCommand(queryString, dbCon.Con);
@@ -41,8 +39,7 @@ namespace Complaint_System.DL
             catch (SqlException ex)
             {
                 return null;
-
-            }
+             }
             finally
             {
                 dbCon.Con.Close();
