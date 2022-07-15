@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\AdminBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
     <Compile Include="DL\DBConnection.cs" />
     <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="GUI\adminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\adminPanel.Designer.cs">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\adminPanel.resx">
+      <DependentUpon>adminPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
