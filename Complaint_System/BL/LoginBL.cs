@@ -1,5 +1,6 @@
 ﻿using Complaint_System.DL;
 using Complaint_System.DTO;
+using Complaint_System.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,21 +18,17 @@ namespace Complaint_System.BL
             _lgDL = new LoginDL();
         }
    
-        public Form1 VerifyUser(LoginDTO lg)
+        public Form VerifyUser(LoginDTO lg)
         {
             // Here we call loginDL objects method verifyUserFromDB
             UserDTO ud = _lgDL.VerifyUserFromDB(lg);
             if (ud == null)
             {
-                //   return new WrongUserGUI();
+                return new InvalidLogin();
             }
             if (ud.Role == "admin")
             {
-                // return new AdminMainGUI(ud);
-            }
-            else
-            {
-                //
+                return new InvalidLogin();
             }
             return null;
         }
