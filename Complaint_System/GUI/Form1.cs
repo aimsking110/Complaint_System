@@ -15,6 +15,7 @@ namespace Complaint_System
         public Form1()
         {
             InitializeComponent();
+            //joined live
         }
 
         private void Form1_Load(object sender, EventArgs e)
