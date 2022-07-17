@@ -1,6 +1,7 @@
 ﻿using Complaint_System.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,11 @@ namespace Complaint_System.DL
     class AdminDL
     {
         private DBConnection dbCon;
+        private CustomerDTO cDTO;
         public AdminDL()
         {
             dbCon = new DBConnection();
+            cDTO = new CustomerDTO();
         }
         public void CreateAccountInDB(UserDTO ud)
         {
@@ -44,6 +47,30 @@ namespace Complaint_System.DL
         public void AddCustomerInDB(UserDTO ud)
         {
 
+        }
+
+ 
+
+        public DataTable GetComplainFromDB()
+        {//
+            DataTable dt = new DataTable();
+            try
+            {
+                dbCon.Con.Open();
+                string queryString1 = "Select * FROM Complain ;";
+                SqlCommand com = new SqlCommand(queryString1, dbCon.Con);
+                SqlDataReader reader = com.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+               throw ex;
+            }
+            finally
+            {
+                dbCon.Con.Close();
+            }
         }
     }
 }
