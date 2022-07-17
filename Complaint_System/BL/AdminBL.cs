@@ -31,5 +31,10 @@ namespace Complaint_System.BL
         {
             return aDL.GetCustomerFromDB();
         }
+
+        public void DeleteCustomer(UserDTO udto)
+        {
+            aDL.DeleteCustomerFromDB(udto);
+        }
     }
 }

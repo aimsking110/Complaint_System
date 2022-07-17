@@ -96,5 +96,28 @@ namespace Complaint_System.DL
             }
 
         }
+
+
+        public void DeleteCustomerFromDB(UserDTO udto)
+        {
+            try
+            {
+                dbCon.Con.Open();
+                string querystring = "Delete From Customer WHERE UserID=@UserID, Name= @Name , Password= @Password,Role = @Role ,CNIC= @CNIC ,PhoneNumber= @PhoneNumber";
+                SqlCommand com = new SqlCommand(querystring, dbCon.Con);
+                com.Parameters.AddWithValue("@UserID", udto.UserID);
+                com.Parameters.AddWithValue("@Name", udto.Name);
+                com.Parameters.AddWithValue("@Password", udto.Password);
+                com.Parameters.AddWithValue("Role", udto.Role);
+                com.Parameters.AddWithValue("CNIC", udto.Cnic);
+                com.Parameters.AddWithValue("PhoneNumber", udto.PhoneNumber);
+                int rowAffected = com.ExecuteNonQuery();
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+
+            }
+        }
     }
 }

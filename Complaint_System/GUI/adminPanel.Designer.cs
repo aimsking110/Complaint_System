@@ -58,7 +58,7 @@ namespace Complaint_System.GUI
             this.admin_panel.Location = new System.Drawing.Point(0, 0);
             this.admin_panel.Name = "admin_panel";
             this.admin_panel.SelectedIndex = 0;
-            this.admin_panel.Size = new System.Drawing.Size(804, 453);
+            this.admin_panel.Size = new System.Drawing.Size(801, 438);
             this.admin_panel.TabIndex = 0;
             this.admin_panel.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -69,7 +69,7 @@ namespace Complaint_System.GUI
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(796, 427);
+            this.tabPage1.Size = new System.Drawing.Size(793, 412);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Customers";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -83,6 +83,7 @@ namespace Complaint_System.GUI
             this.Delete_Btn.TabIndex = 9;
             this.Delete_Btn.Text = "Delete";
             this.Delete_Btn.UseVisualStyleBackColor = true;
+            this.Delete_Btn.Click += new System.EventHandler(this.Delete_Btn_Click);
             // 
             // dataGridView1
             // 
@@ -189,7 +190,7 @@ namespace Complaint_System.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(650, 433);
             this.Controls.Add(this.admin_panel);
             this.Name = "adminPanel";
             this.Text = "admin_Form";

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,6 +52,20 @@ namespace Complaint_System.GUI
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Btn_Click(object sender, EventArgs e)
+        {
+            UserDTO udto = new UserDTO();
+            udto.UserID = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            try
+            {
+                _AdBL.DeleteCustomer(udto);
+            }
+            catch(SqlException ex)
+            {
+                throw ex;
+            }
         }
     }
 }
