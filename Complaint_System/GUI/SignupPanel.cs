@@ -50,5 +50,10 @@ namespace Complaint_System.GUI
                 MessageBox.Show("Account has not been created due to " + ex.Message);
             }
         }
+
+        private void txt_role_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

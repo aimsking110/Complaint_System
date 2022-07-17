@@ -26,6 +26,10 @@ namespace Complaint_System
             _lgBL = new LoginBL();
             _UDTO = new UserDTO();
         }
+         public Form1(LoginDTO temp)
+        {
+            _lgDTO = temp;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

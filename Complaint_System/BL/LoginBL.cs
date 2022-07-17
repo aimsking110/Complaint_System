@@ -30,7 +30,12 @@ namespace Complaint_System.BL
             {
                 return new adminPanel();
             }
-            
+
+            else if (ud.Role == "Customer")
+            {
+                return new CustomerPanel();
+            }
+
             return new InvalidLogin();
         }
     }
