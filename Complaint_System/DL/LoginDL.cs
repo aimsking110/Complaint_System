@@ -22,11 +22,12 @@ namespace Complaint_System.DL
             try
             {
                 dbCon.Con.Open();
-                string queryString = "SELECT * FROM Users WHERE UserID=@UserID AND Password=@Password;";
+                string queryString = "Select * FROM Users WHERE UserID = @UserID AND Password = @Password;";
                 SqlCommand com = new SqlCommand(queryString, dbCon.Con);
                 com.Parameters.AddWithValue("@UserID", lg.Username);
                 com.Parameters.AddWithValue("@Password", lg.Password);
                 SqlDataReader reader = com.ExecuteReader();
+
                 while (reader.Read())
                 {
                     retDTO.UserID = reader["UserID"].ToString();
@@ -39,7 +40,7 @@ namespace Complaint_System.DL
             catch (SqlException ex)
             {
                 return null;
-             }
+            }
             finally
             {
                 dbCon.Con.Close();
@@ -47,6 +48,5 @@ namespace Complaint_System.DL
             return null;
         }
     }
-            
-}
 
+}

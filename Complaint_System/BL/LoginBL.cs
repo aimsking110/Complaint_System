@@ -17,7 +17,7 @@ namespace Complaint_System.BL
         {
             _lgDL = new LoginDL();
         }
-   
+
         public Form VerifyUser(LoginDTO lg)
         {
 
@@ -26,11 +26,12 @@ namespace Complaint_System.BL
             {
                 return new InvalidLogin();
             }
-            if (ud.Role == "admin")
+            if (ud.Role == "Admin")
             {
-                return new InvalidLogin();
+                return new adminPanel();
             }
-            return null;
+            
+            return new InvalidLogin();
         }
     }
 }

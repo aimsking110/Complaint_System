@@ -13,7 +13,7 @@ namespace Complaint_System.DL
         public DBConnection()
         {
             string path = Environment.CurrentDirectory;
-            string[] appPath = path.Split(new string[] { "bin" }, StringSplitOptions.None);
+           
             string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\umaru\Documents\CL&TS.mdf;Integrated Security=True";
             con = new SqlConnection(conString);
         }
