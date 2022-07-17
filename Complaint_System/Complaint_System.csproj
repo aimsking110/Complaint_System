@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BL\AdminBL.cs" />
     <Compile Include="BL\LoginBL.cs" />
+    <Compile Include="DL\AdminDL.cs" />
     <Compile Include="DL\DBConnection.cs" />
     <Compile Include="DL\LoginDL.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
@@ -71,6 +72,12 @@
     <Compile Include="GUI\InvalidLogin.Designer.cs">
       <DependentUpon>InvalidLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SignupPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SignupPanel.Designer.cs">
+      <DependentUpon>SignupPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\adminPanel.resx">
@@ -81,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\InvalidLogin.resx">
       <DependentUpon>InvalidLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SignupPanel.resx">
+      <DependentUpon>SignupPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
