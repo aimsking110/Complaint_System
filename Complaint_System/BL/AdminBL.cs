@@ -26,5 +26,10 @@ namespace Complaint_System.BL
         {
             return aDL.GetComplainFromDB();
         }
+
+        public DataTable GetCustomer()
+        {
+            return aDL.GetCustomerFromDB();
+        }
     }
 }

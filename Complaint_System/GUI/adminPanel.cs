@@ -45,6 +45,12 @@ namespace Complaint_System.GUI
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGridView3.DataSource = _AdBL.GetComplain();
+            dataGridView1.DataSource = _AdBL.GetCustomer();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

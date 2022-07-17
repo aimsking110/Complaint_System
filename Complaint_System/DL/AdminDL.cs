@@ -71,6 +71,30 @@ namespace Complaint_System.DL
             {
                 dbCon.Con.Close();
             }
+
+        }
+
+        public DataTable GetCustomerFromDB()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dbCon.Con.Open();
+                string queryString1 = "Select * FROM Customers ;";
+                SqlCommand com = new SqlCommand(queryString1, dbCon.Con);
+                SqlDataReader reader = com.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                dbCon.Con.Close();
+            }
+
         }
     }
 }
