@@ -103,7 +103,7 @@ namespace Complaint_System.DL
             try
             {
                 dbCon.Con.Open();
-                string querystring = "Delete From Customer WHERE UserID=@UserID, Name= @Name , Password= @Password,Role = @Role ,CNIC= @CNIC ,PhoneNumber= @PhoneNumber";
+                string querystring = "Delete From Customer WHERE UserID=@UserID, Name= @Name , Password= @Password,Role = @Role ,CNIC= @CNIC ,PhoneNumber= @PhoneNumber;";
                 SqlCommand com = new SqlCommand(querystring, dbCon.Con);
                 com.Parameters.AddWithValue("@UserID", udto.UserID);
                 com.Parameters.AddWithValue("@Name", udto.Name);
@@ -117,6 +117,10 @@ namespace Complaint_System.DL
             {
                 throw ex;
 
+            }
+            finally
+            {
+                dbCon.Con.Close();
             }
         }
     }

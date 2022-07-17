@@ -21,6 +21,7 @@ namespace Complaint_System.BL
             ud.Role.ToLower();
             aDL.CreateAccountInDB(ud);
             aDL.AddCustomerInDB(ud);
+            aDL.DeleteCustomerFromDB(ud);
         }
         public DataTable GetComplain()
         {

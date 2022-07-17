@@ -47,6 +47,7 @@ namespace Complaint_System.GUI
         {
             dataGridView3.DataSource = _AdBL.GetComplain();
             dataGridView1.DataSource = _AdBL.GetCustomer();
+            dataGridView2.DataSource = _AdBL.GetComplain();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -61,11 +62,28 @@ namespace Complaint_System.GUI
             try
             {
                 _AdBL.DeleteCustomer(udto);
+
             }
             catch(SqlException ex)
             {
-                throw ex;
+                //throw ex;
+               MessageBox.Show("Customer Account is not deleted");
             }
+        }
+
+        private void radio_resolved_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
