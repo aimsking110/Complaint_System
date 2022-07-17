@@ -23,7 +23,7 @@ namespace Complaint_System.DL
             try
             {
                 dbCon.Con.Open();
-                string queryString1 = "INSERT INTO  Users VALUES (@UserID,  @Name ,  @Password,@Role , @CNIC , @PhoneNumber );";
+                string queryString1 = "INSERT INTO  Users VALUES (@UserID,  @Name ,  @Password,@Role , @CNIC , @PhoneNumber ); INSERT INTO  Customer VALUES (@UserID,  @Name ,  @Password,@Role , @CNIC , @PhoneNumber );";
                 SqlCommand com = new SqlCommand(queryString1, dbCon.Con);
                 com.Parameters.AddWithValue("@UserID", ud.UserID);
                 com.Parameters.AddWithValue("@Name", ud.Name);
