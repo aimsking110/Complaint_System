@@ -15,7 +15,7 @@ namespace Complaint_System
 {
     public partial class Form1 : Form
     {
-      
+        private SignupPanel _sp;
         private LoginDTO _lgDTO;
         private LoginBL _lgBL;
         private UserDTO _UDTO;
@@ -52,7 +52,9 @@ namespace Complaint_System
 
         private void label4_Click(object sender, EventArgs e)
         {
-           
+           _sp - new SignupPanel();
+           _sp.Show();
+            this.Hide();
         }
     }
 }
