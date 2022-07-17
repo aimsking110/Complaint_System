@@ -52,7 +52,7 @@ namespace Complaint_System.DL
  
 
         public DataTable GetComplainFromDB()
-        {//
+        {
             DataTable dt = new DataTable();
             try
             {
