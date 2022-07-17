@@ -80,7 +80,7 @@ namespace Complaint_System.DL
             try
             {
                 dbCon.Con.Open();
-                string queryString1 = "Select * FROM Customers ;";
+                string queryString1 = "Select * FROM Customer ;";
                 SqlCommand com = new SqlCommand(queryString1, dbCon.Con);
                 SqlDataReader reader = com.ExecuteReader();
                 dt.Load(reader);
