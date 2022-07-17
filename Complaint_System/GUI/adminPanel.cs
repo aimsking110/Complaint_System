@@ -27,5 +27,24 @@ namespace Complaint_System.GUI
         {
 
         }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void adminPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+          //  dataGridView3.DataSource = _AdBL.GetComplain();
+        }
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView3.DataSource = _AdBL.GetComplain();
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Complaint_System.DL
         {
             string path = Environment.CurrentDirectory;
            
-            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\umaru\Source\Repos\aimsking110\Complaint_System\Complaint_System\CLTS.mdf;Integrated Security=True;Connect Timeout=30";
+            string conString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\umaru\source\repos\aimsking110\Complaint_System\Complaint_System\CLTS.mdf;Integrated Security=True;Connect Timeout=30";
             con = new SqlConnection(conString);
         }
 

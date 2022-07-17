@@ -2,6 +2,7 @@
 using Complaint_System.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,10 @@ namespace Complaint_System.BL
             ud.Role.ToLower();
             aDL.CreateAccountInDB(ud);
             aDL.AddCustomerInDB(ud);
+        }
+        public DataTable GetComplain()
+        {
+            return aDL.GetComplainFromDB();
         }
     }
 }
