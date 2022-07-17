@@ -91,7 +91,7 @@
             // txt_name
             // 
             this.txt_name.Location = new System.Drawing.Point(292, 112);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(138, 20);
             this.txt_name.TabIndex = 4;
@@ -99,7 +99,7 @@
             // txt_cnic
             // 
             this.txt_cnic.Location = new System.Drawing.Point(292, 142);
-            this.txt_cnic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_cnic.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cnic.Name = "txt_cnic";
             this.txt_cnic.Size = new System.Drawing.Size(138, 20);
             this.txt_cnic.TabIndex = 5;
@@ -107,7 +107,7 @@
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(292, 172);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(2);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(138, 20);
             this.txt_password.TabIndex = 6;
@@ -115,7 +115,7 @@
             // txt_pNumber
             // 
             this.txt_pNumber.Location = new System.Drawing.Point(292, 206);
-            this.txt_pNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_pNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txt_pNumber.Name = "txt_pNumber";
             this.txt_pNumber.Size = new System.Drawing.Size(138, 20);
             this.txt_pNumber.TabIndex = 7;
@@ -124,12 +124,13 @@
             // 
             this.btn_signup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_signup.Location = new System.Drawing.Point(360, 268);
-            this.btn_signup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_signup.Margin = new System.Windows.Forms.Padding(2);
             this.btn_signup.Name = "btn_signup";
             this.btn_signup.Size = new System.Drawing.Size(69, 32);
             this.btn_signup.TabIndex = 8;
             this.btn_signup.Text = "SignUP";
             this.btn_signup.UseVisualStyleBackColor = true;
+            this.btn_signup.Click += new System.EventHandler(this.btn_signup_Click);
             // 
             // label5
             // 
@@ -156,7 +157,7 @@
             // txt_role
             // 
             this.txt_role.Location = new System.Drawing.Point(292, 237);
-            this.txt_role.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_role.Margin = new System.Windows.Forms.Padding(2);
             this.txt_role.Name = "txt_role";
             this.txt_role.ReadOnly = true;
             this.txt_role.Size = new System.Drawing.Size(138, 20);
@@ -177,7 +178,7 @@
             // txt_userID
             // 
             this.txt_userID.Location = new System.Drawing.Point(292, 80);
-            this.txt_userID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_userID.Margin = new System.Windows.Forms.Padding(2);
             this.txt_userID.Name = "txt_userID";
             this.txt_userID.Size = new System.Drawing.Size(138, 20);
             this.txt_userID.TabIndex = 13;
@@ -201,7 +202,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignupPanel";
             this.Text = "SignupPanel";
             this.Load += new System.EventHandler(this.SignupPanel_Load);
