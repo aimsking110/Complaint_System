@@ -52,7 +52,7 @@ namespace Complaint_System
 
         private void label4_Click(object sender, EventArgs e)
         {
-           _sp - new SignupPanel();
+           _sp = new SignupPanel();
            _sp.Show();
             this.Hide();
         }
